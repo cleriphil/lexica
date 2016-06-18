@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Art Auctions</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.0.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="spin.min.js"></script>
+  <script type="text/javascript" src="ladda.min.js"></script>
+  <link href="ladda-themeless.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-custom navbar-fixed-top" id="my-navbar">
+      <div class="navbar-header">
+
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+
+        <a href="/app/" class="navbar-brand">
+          <img src="/app/images/artnet-logo.png" alt="artnet logo">
+        </a>
+
+      </div>
+       <div class="collapse navbar-collapse" id="navbar-collapse">
+
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="#">About Us</a></li>
+            <li><a href="/app/#/login">Login</a></li>
+            <li><a href="/app/#/register">Register</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+  <div ui-view></div>
+
+  <footer>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!--<script src="../node_modules/angular-ui-router/build/angular-ui-router.js"></script>-->
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+  <script src="app.js"></script>
+  <script src="login/login.js"></script>
+  <script src="register/register.js"></script>
+  <script src="welcome/welcome.js"></script>
+  <script src="addAuction/addAuction.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

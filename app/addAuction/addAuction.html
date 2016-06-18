@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <title></title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="AddAuctionCtrl">
+
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item " href="#">Home</a>
+                <a class="blog-nav-item active" ui-sref="addAuction">Add Auction</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+
+        <form class="form-horizontal" ng-submit="addAuction()">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Create Auction</legend>
+                <div>{{auction.title}}</div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtTitle">Auction Title</label>
+                    <div class="col-md-4">
+                      <input id="txtTitle" ng-model="auction.title" name="txtTitle"  type="text" placeholder="placeholder" class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtStartDate">Start Date</label>
+                    <div class="col-md-4">
+                      <input id="txtStartDate" ng-model="auction.startDate" name="txtStartDate"  type="date" class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtEndDate">End Date</label>
+                    <div class="col-md-4">
+                      <input id="txtEndDate" ng-model="auction.endDate" name="txtEndDate"  type="date" class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtAuction">Description</label>
+                    <div class="col-md-4">
+                        <textarea id="txtAuction" ng-model="auction.description" class="form-control" name="txtAuction" ></textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4">
+                        <button type="submit" ng-disabled="!auction.title || !auction.startDate || !auction.endDate || !auction.description" name="singlebutton"  class="btn btn-primary" >Publish</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+    </div>
+    <!-- /.container -->
+
+
+
+
+
+</body>
+
+</html>
