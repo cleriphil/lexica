@@ -13,7 +13,7 @@ angular.module('myApp.register', ['ui.router','firebase'])
 
 // Register controller
 .controller('RegisterCtrl', ['$scope','$location','$firebaseAuth', function($scope,$location,$firebaseAuth) {
-   var firebaseObj = new Firebase("https://art-app.firebaseio.com");
+   var firebaseObj = new Firebase("https://lexica.firebaseio.com");
    var auth = $firebaseAuth(firebaseObj);
    var login={};
    $scope.login=login;
@@ -44,5 +44,5 @@ angular.module('myApp.register', ['ui.router','firebase'])
   $scope.logout = function(){
     CommonProp.logoutUser();
   }
-  
+
 }]);

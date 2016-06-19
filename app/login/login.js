@@ -33,7 +33,7 @@ angular.module('myApp.login', ['ui.router', 'firebase'])
       console.log('Authentication failure');
     });
   }
-  var firebaseObj = new Firebase("https://art-app.firebaseio.com");
+  var firebaseObj = new Firebase("https://lexica.firebaseio.com");
   var loginObj = $firebaseAuth(firebaseObj);
 
   loginObj.$onAuth(function(authData) {
@@ -50,7 +50,7 @@ angular.module('myApp.login', ['ui.router', 'firebase'])
 .service('CommonProp', ['$state', '$firebaseAuth', function($state, $firebaseAuth) {
   var user = '';
 
-  var firebaseObj = new Firebase("https://art-app.firebaseio.com");
+  var firebaseObj = new Firebase("https://lexica.firebaseio.com");
   var loginObj = $firebaseAuth(firebaseObj);
 
   return {

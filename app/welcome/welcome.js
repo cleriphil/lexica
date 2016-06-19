@@ -12,20 +12,20 @@ angular.module('myApp.welcome', ['ui.router', 'firebase'])
 
 .controller('WelcomeCtrl', ['$scope','CommonProp', '$firebaseArray', '$firebaseObject', function($scope, CommonProp, $firebaseArray, $firebaseObject ) {
   $scope.username = CommonProp.getUser();
-  var ref = new Firebase("https://art-app.firebaseio.com/lists");
+  var ref = new Firebase("https://lexica.firebaseio.com/lists");
   $scope.lists = $firebaseArray(ref);
 
 
 
   $scope.editAuction = function(id) {
-    var ref = new Firebase("https://art-app.firebaseio.com/lists/" + id);
+    var ref = new Firebase("https://lexica.firebaseio.com/lists/" + id);
     $scope.listToUpdate = $firebaseObject(ref);
     $('#editModal').modal();
   }
 
   $scope.update = function() {
     console.log($scope.listToUpdate.$id);
-    var fb = new Firebase("https://art-app.firebaseio.com/lists/" + $scope.listToUpdate.$id);
+    var fb = new Firebase("https://lexica.firebaseio.com/lists/" + $scope.listToUpdate.$id);
     var list = $firebaseObject(fb);
 
 
@@ -46,14 +46,14 @@ angular.module('myApp.welcome', ['ui.router', 'firebase'])
   };
 
   $scope.confirmDelete = function(id) {
-    var fb = new Firebase("https://art-app.firebaseio.com/lists/" + id);
+    var fb = new Firebase("https://lexica.firebaseio.com/lists/" + id);
     var list = $firebaseObject(fb);
     $scope.listToDelete = list;
     $('#deleteModal').modal();
   }
 
   $scope.deleteAuction = function() {
-    var fb = new Firebase("https://art-app.firebaseio.com/lists/" + $scope.listToDelete.$id);
+    var fb = new Firebase("https://lexica.firebaseio.com/lists/" + $scope.listToDelete.$id);
     var list = $firebaseObject(fb);
     list.$remove()
     .then(function(ref) {
