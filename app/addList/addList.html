@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <title></title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="AddListCtrl">
+
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item " href="#">Home</a>
+                <a class="blog-nav-item active" ui-sref="addList">Add List</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+
+        <form class="form-horizontal" ng-submit="addList()">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Create List</legend>
+                <div>{{list.title}}</div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtTitle">List Title</label>
+                    <div class="col-md-4">
+                      <input id="txtTitle" ng-model="list.title" name="txtTitle"  type="text" placeholder="placeholder" class="form-control input-md">
+                    </div>
+                </div>
+
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtList">Description</label>
+                    <div class="col-md-4">
+                        <textarea id="txtList" ng-model="list.description" class="form-control" name="txtList" ></textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4">
+                        <button type="submit" ng-disabled="!list.title || !list.description" name="singlebutton"  class="btn btn-primary" >Publish</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+    </div>
+    <!-- /.container -->
+
+
+
+
+
+</body>
+
+</html>
