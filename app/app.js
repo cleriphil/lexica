@@ -5,7 +5,7 @@ angular.module('myApp', [
   'myApp.login',
   'myApp.register',
   'myApp.welcome',
-  'myApp.addAuction',
+  'myApp.addList',
   'firebase'
 ])
 
